@@ -16,7 +16,6 @@
         {
             "name": "Cipher",
             "buildsystem": "meson",
-            "config-opts": ["-Dlibunity=false", "-Dubuntu-bionic-patched-vte=false"],
             "sources": [
                 {
                     "type" : "git",
