@@ -1,9 +1,9 @@
 {
     "app-id": "com.github.arshubham.cipher",
     "runtime": "org.gnome.Platform",
-    "runtime-version" : "42",
+    "runtime-version" : "44",
     "base" : "io.elementary.BaseApp",
-    "base-version" : "juno-21.08",
+    "base-version" : "juno-22.08",
     "sdk": "org.gnome.Sdk",
     "command": "com.github.arshubham.cipher",
     "finish-args": [
@@ -16,7 +16,6 @@
         {
             "name": "Cipher",
             "buildsystem": "meson",
-            "config-opts": ["-Dlibunity=false", "-Dubuntu-bionic-patched-vte=false"],
             "sources": [
                 {
                     "type" : "git",
