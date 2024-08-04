@@ -1,0 +1,57 @@
+From b08fbb4f0560b9638314608316c48cb7f5e3297b Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Mon, 5 Aug 2024 02:03:13 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+---
+ data/com.github.arshubham.cipher.appdata.xml.in |  9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/data/com.github.arshubham.cipher.appdata.xml.in b/data/com.github.arshubham.cipher.appdata.xml.in
+index c5788d6..54c5b85 100644
+--- a/data/com.github.arshubham.cipher.appdata.xml.in
++++ b/data/com.github.arshubham.cipher.appdata.xml.in
+@@ -10,6 +10,7 @@
+   <provides>
+     <binary>com.github.arshubham.cipher</binary>
+   </provides>
++  <launchable type="desktop-id">com.github.arshubham.cipher.desktop</launchable>
+   <screenshots>
+     <screenshot type="default">
+       <image>https://raw.githubusercontent.com/arshubham/cipher/master/data/images/Screenshot1.png</image>
+@@ -39,19 +40,21 @@
+     </release>
+     <release version="2.0.0" date="2019-09-15">
+       <description>
++        <p>In this version</p>
+         <ul>
+-          <li> New Icon! Thanks @Fatih20 (https://github.com/Fatih20) </li>
++          <li> New Icon! Thanks @Fatih20 (github.com/Fatih20) </li>
+           <li> Added Vigenere Cipher </li>
+           <li> Added SHA384 and SHA512 Hash Functions </li>
+         </ul>
+       </description>
+     </release>
+     <release version="1.0.0" date="2019-02-02">
+       <description>
++        <p>In this version</p>
+         <ul>
+           <li> Complete UI/UX Redesign! </li>
+           <li> Added i18n Capability </li>
+-          <li> Added French Tranlations. Thanks @NathanBnm (https://github.com/NathanBnm) </li>
++          <li> Added French Tranlations. Thanks @NathanBnm (github.com/NathanBnm) </li>
+         </ul>
+       </description>
+     </release>
+@@ -80,7 +83,7 @@
+   <description>
+     <p>A simple application for encoding and decoding text. Hide your text from prying eyes!</p>
+     <p>
+-      <b>Note:</b> This application does not actually encrypt files. This was made just to encipher strings. Have fun!</p>    
++      <em>Note:</em> This application does not actually encrypt files. This was made just to encipher strings. Have fun!</p>
+     <p>Available Ciphers</p>
+     <ul>
+       <li>Caesar Shift Cipher</li>
+--
+libgit2 1.7.2
+

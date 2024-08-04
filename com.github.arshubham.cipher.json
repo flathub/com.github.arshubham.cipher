@@ -21,6 +21,10 @@
                     "type" : "git",
                     "url" : "https://github.com/arshubham/cipher.git",
                     "commit" : "bb45279428e8a5417309b5311f0fa09e0aa519d2"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "fix-appdata.patch"
                 }
             ]
         }
