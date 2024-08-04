@@ -1,9 +1,9 @@
 {
     "app-id": "com.github.arshubham.cipher",
     "runtime": "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "46",
     "base" : "io.elementary.BaseApp",
-    "base-version" : "juno-22.08",
+    "base-version" : "juno-23.08",
     "sdk": "org.gnome.Sdk",
     "command": "com.github.arshubham.cipher",
     "finish-args": [
@@ -20,7 +20,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/arshubham/cipher.git",
-                    "commit" : "43500400d7a90c00c2237a3133a7209f39ca1e99"
+                    "commit" : "bb45279428e8a5417309b5311f0fa09e0aa519d2"
                 }
             ]
         }
