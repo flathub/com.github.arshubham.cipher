@@ -1,9 +1,9 @@
 {
     "app-id": "com.github.arshubham.cipher",
     "runtime": "org.gnome.Platform",
-    "runtime-version" : "46",
+    "runtime-version" : "49",
     "base" : "io.elementary.BaseApp",
-    "base-version" : "juno-23.08",
+    "base-version" : "circe-25.08",
     "sdk": "org.gnome.Sdk",
     "command": "com.github.arshubham.cipher",
     "finish-args": [
@@ -28,7 +28,8 @@
                 }
             ],
             "post-install" : [
-                "mkdir -p /app/share/icons/hicolor/scalable/apps && mv /app/share/icons/hicolor/128x128/@2/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+                "mkdir -p /app/share/icons/hicolor/scalable/apps",
+                "mv /app/share/icons/hicolor/128x128/@2/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
                 "find /app/share/icons/hicolor -type f -not -path \"*scalable*\" -not -path \"*actions*\" -name \"*.svg\" -delete"
             ]
         }
