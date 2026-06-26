@@ -1,0 +1,33 @@
+app-id: com.github.arshubham.cipher
+runtime: org.gnome.Platform
+runtime-version: '50'
+base: io.elementary.BaseApp
+base-version: circe-25.08
+sdk: org.gnome.Sdk
+command: com.github.arshubham.cipher
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --device=dri
+  - --socket=wayland
+# WARNING: A temporary solution until io.elementary.BaseApp//circe-26.08 released
+cleanup-commands:
+  - rm -rf /app/bin/sassc
+  - rm -rf /app/include
+  - rm -rf /app/lib/pkgconfig
+  - rm -rf /app/share/gir-1.0
+  - rm -rf /app/share/man
+  - rm -rf /app/share/vala
+modules:
+  - name: Cipher
+    buildsystem: meson
+    post-install:
+      - mkdir -p /app/share/icons/hicolor/scalable/apps
+      - mv /app/share/icons/hicolor/128x128/@2/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - find /app/share/icons/hicolor -type f -not -path "*scalable*" -not -path "*actions*" -name "*.svg" -delete
+    sources:
+      - type: git
+        url: https://github.com/arshubham/cipher.git
+        commit: bb45279428e8a5417309b5311f0fa09e0aa519d2
+      - type: patch
+        path: fix-appdata.patch
